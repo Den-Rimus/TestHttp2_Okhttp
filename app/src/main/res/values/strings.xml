@@ -1,0 +1,8 @@
+<resources>
+   <string name="app_name">TestHttp2_Okhttp</string>
+   <string name="make_a_call_btn_caption">Make a call</string>
+   <string name="using_protocol_caption_format">Using protocol: %s</string>
+   <string name="android_version_caption_format">Android version: %1$s (API %2$d)</string>
+   <string name="http_available_caption">HTTP2 is available from 5.0 (API 21)</string>
+   <string name="use_https_caption">Use https</string>
+</resources>

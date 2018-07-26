@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   android:padding="10dp"
+   tools:context=".MainActivity">
+
+   <Button
+      android:id="@+id/make_call_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/make_a_call_btn_caption"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      />
+
+   <TextView
+      android:id="@+id/android_version_caption"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:gravity="left"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toLeftOf="@id/make_call_button"
+      app:layout_constraintTop_toTopOf="@id/make_call_button"
+      android:layout_marginTop="5dp"
+      android:text="@string/android_version_caption_format"
+      android:textSize="12sp"
+      />
+
+   <TextView
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:gravity="left"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toLeftOf="@id/make_call_button"
+      app:layout_constraintBottom_toBottomOf="@id/make_call_button"
+      android:layout_marginBottom="5dp"
+      android:text="@string/http_available_caption"
+      android:textSize="12sp"
+      />
+
+   <CheckBox
+      android:id="@+id/use_https_checkbox"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@id/make_call_button"
+      app:layout_constraintRight_toRightOf="parent"
+      android:text="@string/use_https_caption"
+      android:checked="true"
+      />
+
+   <TextView
+      android:id="@+id/protocol_caption"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toBottomOf="@id/use_https_checkbox"
+      app:layout_constraintLeft_toLeftOf="parent"
+      android:layout_marginTop="6dp"
+      android:text="@string/using_protocol_caption_format"
+      tools:text="Using protocol: HTTP2"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      android:visibility="gone"
+      tools:visibility="visible"
+      />
+
+   <ScrollView
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      app:layout_constraintTop_toBottomOf="@id/protocol_caption"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      android:layout_marginTop="8dp"
+      android:overScrollMode="never"
+      android:fadeScrollbars="true"
+      >
+
+      <TextView
+         android:id="@+id/call_response_text_view"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:textSize="9sp"
+         tools:text='{
+   \t"posts": [
+   \t\t{
+   \t\t\t"id": 1,
+   \t\t\t"title": "hello"
+   \t\t}
+   \t],
+   \t"profile": {
+   \t\t"name": "typicode"
+   \t}
+}'
+         />
+   </ScrollView>
+
+   <ProgressBar
+      android:id="@+id/progress"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:indeterminate="true"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      android:visibility="gone"
+      tools:visibility="visible"
+      />
+</androidx.constraintlayout.widget.ConstraintLayout>
